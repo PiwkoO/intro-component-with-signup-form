@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --error-state: hsl(0, 100%, 74%) ;
+  --button-bg: hsl(154, 59%, 51%);
+  --button-bg-hover: hsla(154, 65%, 68%, 1);
+  --accent: hsl(248, 32%, 49%);
+  --font-color: hsl(249, 10%, 26%);
+  --placeholder-color: hsla(248, 9%, 26%, 0.75);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+  --shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+  min-height: 100svh;
+  background: url(images/bg-intro-mobile.png), var(--error-state) no-repeat;
+  background-size: contain;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  max-width: 500px;
+}
+
+h1 {
+  margin-bottom: 16px ;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  letter-spacing: -0.03rem;
+  text-align: center;
+  color: var(--white);
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  text-align: center;
+  color: var(--white);
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--error-state);
+}
+
+.pricing {
+  padding: 18px 48px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  background-color: var(--accent);
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+p.pricing-info {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  text-align: center;
+}
+
+span {
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+form.show-message::before {
+  content: 'Thank you for registering!';
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--button-bg);
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+input {
+  padding: 15px 20px;
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+  letter-spacing: 0.025rem;
+  color: var(--font-color);
+  transition: border-color .2s;
+}
+
+input:focus-visible {
+  outline-color: var(--accent);
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+}
+
+input.form-error {
+  outline: 2px solid var(--error-state);
+}
+
+label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+label.form-label {
+  display: none;
+  text-align: right;
+  color: var(--error-state);
+}
+
+label.form-label.form-error {
+  display: block;
+}
+
+.form-submit {
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--button-bg);
+  box-shadow: 0 -4px 0 0 rgba(0, 0, 0, 0.09) inset;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.form-submit:hover {
+  background-color: var(--button-bg-hover);
+}
+
+p.form-terms {
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: var(--grayish-blue);
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: url(images/bg-intro-desktop.png), var(--error-state);
+  }
+
+  main {
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+    max-width: 1110px;
+  }
+
+  aside {
+    min-width: 540px;
+  }
+
+  h1 {
+    margin-bottom: 24px;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    letter-spacing: -0.05rem;
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .input-wrapper {
+    margin-bottom: 20px;
+  }
+}
