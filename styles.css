@@ -207,4 +207,8 @@ p.form-terms {
   .input-wrapper {
     margin-bottom: 20px;
   }
+
+  form {
+    padding: 40px;
+  }
 }
