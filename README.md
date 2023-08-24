@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution on frontendmentor.io]()
-- [Live preview]()
+- [Solution on frontendmentor.io](https://www.frontendmentor.io/solutions/component-with-sign-up-form-gMBIWc4hwG)
+- [Live preview](https://piwkoo.github.io/intro-component-with-signup-form/)
 
 ## My process
 
